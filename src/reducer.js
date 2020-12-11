@@ -13,7 +13,7 @@ console.log(action);
         case 'SET_USER':
             return{
                 ...state,
-                user:action.user
+                user:action.user, 
             }
         default : 
             return state;
@@ -21,4 +21,4 @@ console.log(action);
 
 }
 
-export default reducer;
+export default reducer
