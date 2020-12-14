@@ -33,11 +33,18 @@ function App() {
         //dispatch will pop user into datalayer
         dispatch({
           type: "SET_USER",
-          user:user,
+          user: user,
+        });
+      });
+
+      s.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists,
         });
       });
     }
-    console.log('Hello i am',user)
+    
   }, []);
 
   return (
